@@ -1,0 +1,107 @@
+# ─────────────────────────────
+# STARSHIP CONFIG FOR DEVS 🚀
+# ─────────────────────────────
+
+add_newline = true
+format = """
+(bold cyan)$username$hostname$directory$git_branch$git_status $nodejs$java$python$docker_context$kubernetes$package$memory_usage$time$cmd_duration$battery $character
+"""
+
+
+# ─── Directory ─────────────────────────────
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "bold yellow"
+
+# ─── Prompt Character ──────────────────────
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
+
+# ─── Git ───────────────────────────────────
+[git_branch]
+symbol = "🌱 "
+style = "bold purple"
+
+[git_status]
+style = "bold red"
+
+# ─── Languages & Runtimes ──────────────────
+[nodejs]
+symbol = " "
+format = "[$symbol($version )]($style)"
+style = "bold green"
+
+[java]
+symbol = "☕ "
+format = "[$symbol($version )]($style)"
+style = "bold blue"
+
+[python]
+symbol = "🐍 "
+format = "[$symbol($version )]($style)"
+style = "bold yellow"
+
+[docker_context]
+symbol = "🐳 "
+format = "[$symbol $context]($style) "
+style = "bold cyan"
+
+[kubernetes]
+symbol = "⎈ "
+format = "[$symbol$context]($style)"
+style = "bold magenta"
+
+[package]
+disabled = false
+symbol = "📦 "
+style = "bold cyan"
+
+[rust]
+symbol = "🦀 "
+style = "bold red"
+
+[golang]
+symbol = "🐹 "
+style = "bold cyan"
+
+# ─── System Info ───────────────────────────
+[memory_usage]
+disabled = false
+threshold = 70
+symbol = "💾 "
+format = "[$symbol $ram]($style)"
+style = "bold red"
+
+[cmd_duration]
+min_time = 2000
+format = "⏱ [$duration]($style) "
+style = "bold yellow"
+
+[battery]
+disabled = false
+full_symbol = "🔋 "
+charging_symbol = "⚡ "
+discharging_symbol = "💀 "
+
+[time]
+disabled = false
+format = "🕒 [$time]($style) "
+time_format = "%I:%M %p"
+style = "bold white"
+
+# ─── User & Host ───────────────────────────
+[username]
+style_user = "bold cyan"
+style_root = "bold red"
+format = "[$user]($style)@"
+show_always = true
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style) "
+style = "bold green"
+
+
+
