@@ -27,7 +27,13 @@ chsh -s $(which zsh)
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 Enable them by editing ~/.zshrc:
+2. Install Starship Prompt
+curl -sS https://starship.rs/install.sh | sh
 
+
+Add to bottom of ~/.zshrc:
+
+eval "$(starship init zsh)"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 # Useful plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
