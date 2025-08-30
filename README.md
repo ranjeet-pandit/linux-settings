@@ -41,7 +41,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 
 
-Also for working with External Monitor chnage to Wayland from default x11 and also make the permanent fix by editing wayland to tru in custom.config
+Also for working with External Monitor change to Wayland from default x11 and also make the permanent fix by editing wayland to true in custom.config
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 curl -sS https://starship.rs/install.sh | sh
